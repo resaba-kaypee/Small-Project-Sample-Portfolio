@@ -1,0 +1,177 @@
+*,*::before,*::after{box-sizing: border-box;}
+
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS';
+  color: #666;
+  line-height: 1.6;
+}
+
+a
+{
+  color: #666;
+  text-decoration: none;
+}
+
+li
+{
+  list-style: none;
+}
+
+.container
+{
+  width: 90%;
+  margin: auto;
+  overflow: auto;
+}
+
+header
+{
+  display: flex;
+  background: #333;
+  min-height: 55px;
+  color: #fff;
+}
+
+header h1
+{
+  text-align: center;
+  flex-basis: 40%;
+}
+
+header nav
+{
+  flex-basis: 60%;
+}
+
+header nav ul{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 20px;
+  height: 100%;
+}
+header nav ul li
+{
+  margin: 0 20px;
+}
+nav li.current a
+{
+  position: relative;
+  top: -10px;
+}
+nav li.current a, nav a:hover
+{
+  color: #03899c;
+  border-bottom: 3px solid #03899c;
+}
+
+section
+{
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.tagline
+{
+  background: #03899c;
+  color: #fff;
+}
+
+.tagline h1
+{
+  text-align: center;
+  font-size: 35px;
+}
+.hidden-img
+{
+  display: none;
+}
+
+/* #gallery
+{
+  margin: 0;
+  padding: 0;
+  width:  100%;
+} */
+
+#gallery
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+
+#gallery li
+{
+  width: 31%;
+  cursor: pointer;
+  margin: 12px 0;
+  position: relative;
+}
+
+#gallery li img
+{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+footer
+{
+  color: #fff;
+  text-align: center;
+  background: #03899c;
+  height: 55px;
+  padding-top: 10px;
+}
+
+.overlay
+{
+  background-color: rgba(0, 0, 128, 0.9);
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98%;
+  color: #fff;
+  padding: 20px;
+  pointer-events: none;
+}
+
+@media (max-width: 768px)
+{
+  header, header ul
+  {
+    flex-direction: column;
+  }
+  header nav ul li 
+  {
+    margin-bottom: 10px;
+  }
+  nav li.current a
+  {
+    /* position: relative; */
+    top: 0px;
+  }
+  #gallery li
+  {
+    width: 48%;
+  }
+}
+
+@media (max-width: 568px)
+{
+  #gallery li
+  {
+    width: 100%;
+  }
+}
+
